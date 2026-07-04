@@ -1,7 +1,7 @@
 # CSharp-Learning-Phase1
 
 This repository documents my Phase 1 progress learning C# for Unity game
-development — covering core syntax fundamentals and a first working
+development, covering core syntax fundamentals and a first working
 Unity script.
 
 ## 📄 What This Repository Contains
