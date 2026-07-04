@@ -1,0 +1,31 @@
+// RotateObject.cs
+// A simple Unity script demonstrating variables, conditional statements,
+// and the Unity lifecycle method Update().
+//
+// SETUP IN UNITY:
+// 1. Create a new Unity project (or open an existing one).
+// 2. In the Project window: right-click -> Create -> C# Script -> name it "RotateObject".
+// 3. Paste this code into the script (replacing the default content).
+// 4. Drag the script onto any GameObject in your Scene (e.g., a Cube).
+// 5. Press Play to see the object rotate.
+
+using UnityEngine;
+
+public class RotateObject : MonoBehaviour
+{
+    // VARIABLES & DATA TYPES
+    // These appear in the Unity Inspector so you can tweak them without
+    // touching code.
+    public float rotationSpeed = 50f;   // degrees per second
+    public bool rotateClockwise = true; // toggles direction
+
+    // Update() is called once per frame by Unity automatically.
+    void Update()
+    {
+        // CONDITIONAL STATEMENT: decide direction based on the bool above
+        float direction = rotateClockwise ? 1f : -1f;
+
+        // Time.deltaTime makes rotation speed consistent regardless of frame rate
+        transform.Rotate(0, direction * rotationSpeed * Time.deltaTime, 0);
+    }
+}
